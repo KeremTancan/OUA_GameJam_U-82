@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
 
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
-    public float waterLevel = 0f;
     public float underwaterGravity = 0f;
 
     private void Start()
@@ -17,45 +16,64 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+
     private void Update()
     {
+        rb.isKinematic = false;
         // Check if the character is underwater
-        if (transform.position.y < waterLevel)
-        {
-            isUnderwater = true;
-        }
-        else
-        {
-            isUnderwater = false;
-        }
-
-        // Set the gravity scale according to whether the character is underwater or not
         if (isUnderwater)
         {
             rb.gravityScale = underwaterGravity;
+
+            // Move the character up or down while underwater
+            float verticalInput = Input.GetAxisRaw("Vertical");
+            float VmoveDirection = verticalInput * moveSpeed;
+            rb.velocity = new Vector2(rb.velocity.x, VmoveDirection);
+
+            float horizontalInput = Input.GetAxisRaw("Horizontal");
+            float HmoveDirection = horizontalInput * moveSpeed;
+            rb.velocity = new Vector2(HmoveDirection, rb.velocity.y);
+
         }
         else
         {
             rb.gravityScale = 1f;
-        }
 
-        // Move the character left or right
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
-        float moveDirection = horizontalInput * moveSpeed;
-        rb.velocity = new Vector2(moveDirection, rb.velocity.y);
+            // Move the character left or right while on land
+            float horizontalInput = Input.GetAxisRaw("Horizontal");
+            float moveDirection = horizontalInput * moveSpeed;
+            rb.velocity = new Vector2(moveDirection, rb.velocity.y);
 
-        // Make the character jump if the space bar is pressed
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (!isUnderwater)
+            // Make the character jump if the space bar is pressed
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             }
-            else
-            {
-                rb.AddForce(new Vector2(0f, jumpForce / 2f), ForceMode2D.Impulse);
-            }
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Water"))
+        {
+
+            Invoke("ChangeBool", 0.4f);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Water"))
+        {
+            
+            isUnderwater = false;
+        }
+    }
+
+    void ChangeBool()
+    {
+        isUnderwater = true;
+    }
+
 }
 
