@@ -1,25 +1,28 @@
 fileFormatVersion: 2
-guid: cc81d60d5750149f784ac74b91286ec5
+guid: 612000f6e71e04e39b891295d3ea9098
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 21300000
-    second: player-idle_0
+    second: player-swiming_0
   - first:
       213: 21300002
-    second: player-idle_1
+    second: player-swiming_1
   - first:
       213: 21300004
-    second: player-idle_2
+    second: player-swiming_2
   - first:
       213: 21300006
-    second: player-idle_3
+    second: player-swiming_3
   - first:
       213: 21300008
-    second: player-idle_4
+    second: player-swiming_4
   - first:
       213: 21300010
-    second: player-idle_5
+    second: player-swiming_5
+  - first:
+      213: 21300012
+    second: player-swiming_6
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -123,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player-idle_0
+      name: player-swiming_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 16
-        width: 24
-        height: 49
+        x: 0
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,13 +147,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-idle_1
+      name: player-swiming_1
       rect:
         serializedVersion: 2
-        x: 109
-        y: 15
-        width: 29
-        height: 49
+        x: 80
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,13 +168,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-idle_2
+      name: player-swiming_2
       rect:
         serializedVersion: 2
-        x: 187
-        y: 14
-        width: 33
-        height: 49
+        x: 160
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,13 +189,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-idle_3
+      name: player-swiming_3
       rect:
         serializedVersion: 2
-        x: 264
-        y: 11
-        width: 39
-        height: 51
+        x: 240
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,13 +210,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-idle_4
+      name: player-swiming_4
       rect:
         serializedVersion: 2
-        x: 347
-        y: 14
-        width: 33
-        height: 49
+        x: 320
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,13 +231,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-idle_5
+      name: player-swiming_5
       rect:
         serializedVersion: 2
-        x: 429
-        y: 15
-        width: 29
-        height: 49
+        x: 400
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,10 +251,31 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: player-swiming_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8414e2d5939674e459dc1d404c0a1e35
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -259,12 +283,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      player-idle_4: 21300008
-      player-idle_2: 21300004
-      player-idle_3: 21300006
-      player-idle_5: 21300010
-      player-idle_0: 21300000
-      player-idle_1: 21300002
+      player-swiming_1: 21300002
+      player-swiming_3: 21300006
+      player-swiming_2: 21300004
+      player-swiming_6: 21300012
+      player-swiming_0: 21300000
+      player-swiming_4: 21300008
+      player-swiming_5: 21300010
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

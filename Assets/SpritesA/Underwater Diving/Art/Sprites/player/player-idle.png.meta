@@ -1,28 +1,25 @@
 fileFormatVersion: 2
-guid: 99a222ddcff1a40afb57de817e1bf2c0
+guid: cc81d60d5750149f784ac74b91286ec5
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 21300000
-    second: player-rush_0
+    second: player-idle_0
   - first:
       213: 21300002
-    second: player-rush_1
+    second: player-idle_1
   - first:
       213: 21300004
-    second: player-rush_2
+    second: player-idle_2
   - first:
       213: 21300006
-    second: player-rush_3
+    second: player-idle_3
   - first:
       213: 21300008
-    second: player-rush_4
+    second: player-idle_4
   - first:
       213: 21300010
-    second: player-rush_5
-  - first:
-      213: 21300012
-    second: player-rush_6
+    second: player-idle_5
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -126,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player-rush_0
+      name: player-idle_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 33
-        width: 49
-        height: 18
+        x: 0
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,13 +144,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-rush_1
+      name: player-idle_1
       rect:
         serializedVersion: 2
-        x: 106
-        y: 28
-        width: 37
-        height: 20
+        x: 80
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,13 +165,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-rush_2
+      name: player-idle_2
       rect:
         serializedVersion: 2
-        x: 195
-        y: 29
-        width: 25
-        height: 19
+        x: 160
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,13 +186,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-rush_3
+      name: player-idle_3
       rect:
         serializedVersion: 2
-        x: 271
-        y: 24
-        width: 37
-        height: 24
+        x: 240
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,13 +207,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-rush_4
+      name: player-idle_4
       rect:
         serializedVersion: 2
-        x: 341
-        y: 29
-        width: 59
-        height: 25
+        x: 320
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,13 +228,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-rush_5
+      name: player-idle_5
       rect:
         serializedVersion: 2
-        x: 420
-        y: 27
-        width: 43
-        height: 27
+        x: 400
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,31 +248,10 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: player-rush_6
-      rect:
-        serializedVersion: 2
-        x: 494
-        y: 28
-        width: 49
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2305410000000000800000000000000
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8b4960bc25f4f34469d57fd3836543ce
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -283,13 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      player-rush_6: 21300012
-      player-rush_5: 21300010
-      player-rush_3: 21300006
-      player-rush_1: 21300002
-      player-rush_2: 21300004
-      player-rush_0: 21300000
-      player-rush_4: 21300008
+      player-idle_4: 21300008
+      player-idle_2: 21300004
+      player-idle_3: 21300006
+      player-idle_5: 21300010
+      player-idle_0: 21300000
+      player-idle_1: 21300002
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
