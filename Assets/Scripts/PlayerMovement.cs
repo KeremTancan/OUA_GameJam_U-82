@@ -117,7 +117,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Shoot()
     {
+        
         Instantiate(bullet, firepoint.position, firepoint.rotation);
     }
+    
 }
 
