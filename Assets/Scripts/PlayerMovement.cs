@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     Animator playerAnimator;
-    private bool isUnderwater = false;
+    public bool isUnderwater = false;
     public bool facingRight = true;
     public Transform firepoint;
     public GameObject bullet;
