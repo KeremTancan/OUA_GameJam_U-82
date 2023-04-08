@@ -104,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void LoverBreath(int value)
     {
-        Thread.Sleep(5000);
+        
         currentBreath -= value;
         nefesBar.SetBreath(currentBreath);
     }
@@ -114,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.CompareTag("Water"))
         {
-
+            
             Invoke("ChangeBool", 0.4f);
         }
     }
