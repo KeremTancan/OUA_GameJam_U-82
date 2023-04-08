@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     Animator playerAnimator;
     private bool isUnderwater = false;
     public bool facingRight = true;
+    public Transform firepoint;
+    public GameObject bullet;
 
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
@@ -33,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
             float verticalInput = Input.GetAxisRaw("Vertical");
             float VmoveDirection = verticalInput * moveSpeed;
             rb.velocity = new Vector2(rb.velocity.x, VmoveDirection);
-            
+
             float horizontalInput = Input.GetAxisRaw("Horizontal");
             float HmoveDirection = horizontalInput * moveSpeed;
             rb.velocity = new Vector2(HmoveDirection, rb.velocity.y);
@@ -45,6 +47,11 @@ public class PlayerMovement : MonoBehaviour
             else if (rb.velocity.x > 0 && !facingRight)
             {
                 FlipFace(); //Yuzunu cevir metodu
+            }
+
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Shoot();
             }
         }
         else
@@ -87,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.CompareTag("Water"))
         {
-            
+
             isUnderwater = false;
         }
     }
@@ -104,6 +111,12 @@ public class PlayerMovement : MonoBehaviour
         tempLocalScale.x *= -1;
         transform.localScale = tempLocalScale;
 
+    }
+
+    void Shoot()
+    {      
+          Instantiate(bullet, firepoint.position, firepoint.rotation);
+        
     }
 }
 
