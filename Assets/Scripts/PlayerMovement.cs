@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
@@ -23,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
     private float nextFireTime = 0.0f;
     public float fireRate = 0.8f;  //Ateş etme zamanı
 
+    private float timer = 0f;
+    private float interval = 5f;
+
 
     private void Start()
     {
@@ -40,6 +44,15 @@ public class PlayerMovement : MonoBehaviour
         // Check if the character is underwater
         if (isUnderwater)
         {
+
+            timer += Time.deltaTime;
+
+            if (timer >= interval)
+            {
+                
+                LoverBreath(15); 
+                timer = 0f;
+            }
             rb.gravityScale = underwaterGravity;
             playerAnimator.SetBool("isSwimming", true);
 
@@ -74,6 +87,9 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            nefesBar.SetBreath(maxBreath);
+            currentBreath= maxBreath;
+
             playerAnimator.SetBool("isSwimming", false);
             rb.gravityScale = 1f;
 
@@ -94,20 +110,22 @@ public class PlayerMovement : MonoBehaviour
                 FlipFace(); //Yuzunu cevir metodu
                 
             }
-            // Make the character jump if the space bar is pressed
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            }
+            
+           
         }
 
         
     }
     void LoverBreath(int value)
     {
-        
+       
         currentBreath -= value;
         nefesBar.SetBreath(currentBreath);
+        if(currentBreath == 0)
+        {
+            ScoreCounter.scoreValue = 0;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
 
