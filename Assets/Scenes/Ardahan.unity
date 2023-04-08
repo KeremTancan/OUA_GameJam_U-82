@@ -6625,7 +6625,7 @@ MonoBehaviour:
   - {fileID: 2174871204344295618, guid: 8f3d0cf5dc4b1444f9b732329c144513, type: 3}
   - {fileID: 8799754637432756260, guid: 63624bb924a691f47b8e88389a2db1d8, type: 3}
   - {fileID: 2008658315319719701, guid: d552e5f5d540ce14da759ea4357d49e5, type: 3}
-  MaksSpawn: 15
+  MaksSpawn: 50
   DeathPoint: 0
 --- !u!4 &1897233860
 Transform:
