@@ -11,7 +11,6 @@ public class ArdahanMovement : MonoBehaviour
 
     Vector2 movement;
     Vector2 mousePos;
-    PlayerMovement playerMovement;
 
     // Update is called once per frame
     void Update()
@@ -26,13 +25,11 @@ public class ArdahanMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (playerMovement.isUnderwater)
-        {
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
 
             Vector2 lookDir = mousePos - rb.position;
             float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
             rb.rotation = angle;
-        }
+        
     }
 }
