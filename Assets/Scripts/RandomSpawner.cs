@@ -6,22 +6,52 @@ public class RandomSpawner : MonoBehaviour
 {
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
+    public int MaksSpawn = 10;
+    public int DeathPoint = 10;
+    private List<GameObject> objects = new List<GameObject>();
 
 
     void Start()
     {
+        for (int i = 0; i < MaksSpawn; i++ ) 
+        {
+            int randEnemy = Random.Range(0, enemyPrefabs.Length);
+            int randSpawnPoint = Random.Range(0, spawnPoints.Length);
+
+
+            GameObject obj =  Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
+            objects.Add(obj);   
+
+        }
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        // Oluþturulan tüm objeleri kontrol et
+        for (int i = objects.Count - 1; i >= 0; i--)
+        {
+            GameObject obj = objects[i];
+            if (obj == null)
+            {
+                // Eðer obje yok olduysa, deathpoint deðerini artýr ve listeden çýkar
+                DeathPoint++;
+                objects.RemoveAt(i);
+            }
+        }
+
+
+
+
+        if (DeathPoint>0)
         {
             int randEnemy = Random.Range(0, enemyPrefabs.Length);
             int randSpawnPoint = Random.Range(0, spawnPoints.Length);
 
-            Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
+            GameObject obj =  Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
+            objects.Add(obj);
+            DeathPoint--;
         }
     }
 }
