@@ -1824,6 +1824,7 @@ GameObject:
   - component: {fileID: 453864385}
   - component: {fileID: 453864384}
   - component: {fileID: 453864386}
+  - component: {fileID: 453864387}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Water
@@ -1869,13 +1870,13 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 13}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 44.846645, y: -3.0708823}
+  - {x: 45.07646, y: 7.9028873}
   - {x: 45.020603, y: -9.120952}
   - {x: 45.026527, y: -24.877102}
   - {x: -1.141306, y: -24.895748}
@@ -1902,13 +1903,40 @@ EdgeCollider2D:
   - {x: -11.359196, y: -9.0106735}
   - {x: -11.984909, y: -8.736747}
   - {x: -11.981504, y: -3.303193}
-  - {x: -10.0538, y: -3.2802937}
-  - {x: -9.926081, y: -3.0214036}
-  - {x: 44.913406, y: -3.1417115}
+  - {x: -11.811977, y: -4.0517597}
+  - {x: -12.007245, y: -5.0039225}
+  - {x: -12.168884, y: -4.9343824}
+  - {x: -12.004326, y: -7.7546506}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!61 &453864387
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453864383}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 15.066238, y: -0.6378603}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 59.898468, y: 22.782267}
+  m_EdgeRadius: 0
 --- !u!1 &461849507
 GameObject:
   m_ObjectHideFlags: 0
@@ -4605,11 +4633,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3995390080345030348, guid: f1bc670b580e6404dbd0117139c4f879, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.84
+      value: 9.71
       objectReference: {fileID: 0}
     - target: {fileID: 3995390080345030348, guid: f1bc670b580e6404dbd0117139c4f879, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.9
+      value: 18.14
       objectReference: {fileID: 0}
     - target: {fileID: 3995390080345030348, guid: f1bc670b580e6404dbd0117139c4f879, type: 3}
       propertyPath: m_LocalPosition.z

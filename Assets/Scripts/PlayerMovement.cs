@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         nefesBar.SetMaxBreath(maxBreath);
         rb = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+        
     }
 
 
@@ -116,15 +117,17 @@ public class PlayerMovement : MonoBehaviour
         {
             
             Invoke("ChangeBool", 0.4f);
+            Debug.Log("Suda");
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Air"))
+        if (collision.CompareTag("Water"))
         {
             
             isUnderwater = false;
+            Debug.Log("Suda değil");
         }
     }
 
