@@ -44,8 +44,18 @@ public class BalıkHareket : MonoBehaviour
         {
             ChangeDirection();
         }
+       
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Bullet"))
+        {
+            Destroy(gameObject);
+            ScoreCounter.scoreValue += 10;
+
+        }
+    }
     void ChangeDirection()
     {
         moveDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
