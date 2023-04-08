@@ -18,7 +18,7 @@ public class FishMovement : MonoBehaviour
         {
             Destroy(gameObject);
             ScoreCounter.scoreValue += 10;
-            Debug.Log(ScoreCounter.scoreValue);
+            
         }
     }
     void Update()
