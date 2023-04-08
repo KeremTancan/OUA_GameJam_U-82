@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
     public float underwaterGravity = 0f;
+    private float nextFireTime = 0.0f;
+    public float fireRate = 0.8f;  //Ateş etme zamanı
 
 
     private void Start()
@@ -47,10 +49,13 @@ public class PlayerMovement : MonoBehaviour
             if (rb.velocity.x < 0 && facingRight)//y�z� sa�a do�ru ba�lang��taki gibi ama ivme negatif ,y�z�n� �evir
             {
                 FlipFace();//Yuzunu cevir metodu
+                firepoint.transform.rotation = Quaternion.Euler(0, 0, 180);
+
             }
             else if (rb.velocity.x > 0 && !facingRight)
             {
                 FlipFace(); //Yuzunu cevir metodu
+                firepoint.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
 
             if (Input.GetButtonDown("Fire1"))
@@ -73,10 +78,13 @@ public class PlayerMovement : MonoBehaviour
             if (rb.velocity.x < 0 && facingRight)//y�z� sa�a do�ru ba�lang��taki gibi ama ivme negatif ,y�z�n� �evir
             {
                 FlipFace();//Yuzunu cevir metodu
+                
+
             }
             else if (rb.velocity.x > 0 && !facingRight)
             {
                 FlipFace(); //Yuzunu cevir metodu
+                
             }
             // Make the character jump if the space bar is pressed
             if (Input.GetKeyDown(KeyCode.Space))
@@ -84,7 +92,10 @@ public class PlayerMovement : MonoBehaviour
                 rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             }
         }
+
+        
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -121,8 +132,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Shoot()
     {
-        
-        Instantiate(bullet, firepoint.position, firepoint.rotation);
+        if (Time.time > nextFireTime)
+        {
+            Instantiate(bullet, firepoint.position, firepoint.rotation);
+            nextFireTime = Time.time + fireRate;  // Karakterin tekrar ateş edebileceği zamanı güncelle
+        }
     }
     
 }
