@@ -27,24 +27,32 @@ public class PlayerMovement : MonoBehaviour
     private float timer = 0f;
     private float interval = 5f;
 
-
+    
+    
     private void Start()
     {
+         
+        
+        
+
         currentBreath = maxBreath;
         nefesBar.SetMaxBreath(maxBreath);
         rb = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         
+
     }
 
 
     private void Update()
     {
+        
         rb.isKinematic = false;
         // Check if the character is underwater
         if (isUnderwater)
         {
 
+            
             timer += Time.deltaTime;
 
             if (timer >= interval)
@@ -87,6 +95,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            AudioSource.FindObjectOfType<AudioSource>().Pause();
             nefesBar.SetBreath(maxBreath);
             currentBreath= maxBreath;
 
