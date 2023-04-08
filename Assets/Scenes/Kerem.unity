@@ -1490,7 +1490,9 @@ MonoBehaviour:
   - {fileID: 213882596}
   - {fileID: 2068469250}
   enemyPrefabs:
-  - {fileID: 9014431117586447591, guid: c4f4931684648b14ea90bdaa556d6859, type: 3}
+  - {fileID: 2173330495604987826, guid: 5ea74e89e97ae614e955ab316da89efe, type: 3}
+  - {fileID: 2174871204344295618, guid: 8f3d0cf5dc4b1444f9b732329c144513, type: 3}
+  - {fileID: 8799754637432756260, guid: 63624bb924a691f47b8e88389a2db1d8, type: 3}
   - {fileID: 2008658315319719701, guid: d552e5f5d540ce14da759ea4357d49e5, type: 3}
 --- !u!4 &2038630102
 Transform:
