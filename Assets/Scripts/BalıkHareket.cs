@@ -32,7 +32,7 @@ public class BalıkHareket : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveDirection * speed * Time.fixedDeltaTime);
-        float newPosY = Mathf.Clamp(rb.position.y, -Mathf.Abs(rb.position.x), 0f); // Y = 0 ı balıkların geçememesini sağlıyor.
+        float newPosY = Mathf.Clamp(rb.position.y, -Mathf.Abs(rb.position.x), 8f); // Y = -5 ı balıkların geçememesini sağlıyor.
         rb.MovePosition(new Vector2(rb.position.x, newPosY) + moveDirection * speed * Time.fixedDeltaTime);
     }
 
