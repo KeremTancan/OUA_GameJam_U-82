@@ -23,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
     private float nextFireTime = 0.0f;
     public float fireRate = 0.8f;  //Ateş etme zamanı
 
+    private float timer = 0f;
+    private float interval = 5f;
+
 
     private void Start()
     {
@@ -40,6 +43,15 @@ public class PlayerMovement : MonoBehaviour
         // Check if the character is underwater
         if (isUnderwater)
         {
+
+            timer += Time.deltaTime;
+
+            if (timer >= interval)
+            {
+                
+                LoverBreath(5); 
+                timer = 0f;
+            }
             rb.gravityScale = underwaterGravity;
             playerAnimator.SetBool("isSwimming", true);
 
@@ -74,6 +86,9 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            nefesBar.SetBreath(maxBreath);
+            currentBreath= maxBreath;
+
             playerAnimator.SetBool("isSwimming", false);
             rb.gravityScale = 1f;
 
@@ -105,7 +120,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void LoverBreath(int value)
     {
-        
+       
         currentBreath -= value;
         nefesBar.SetBreath(currentBreath);
     }
