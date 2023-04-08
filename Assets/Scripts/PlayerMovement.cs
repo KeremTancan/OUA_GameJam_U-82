@@ -11,8 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public bool facingRight = true;
     public Transform firepoint;
     public GameObject bullet;
-    public Slider slider;
-    public int maxNefes;
+    
 
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
