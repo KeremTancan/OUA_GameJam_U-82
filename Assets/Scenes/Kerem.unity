@@ -769,6 +769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1299473438}
   - component: {fileID: 1299473439}
+  - component: {fileID: 1299473440}
   m_Layer: 5
   m_Name: NefesBar
   m_TagString: Untagged
@@ -850,6 +851,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1299473440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299473437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc2dfd4b823a64983f5f6b8743d4d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1299473439}
 --- !u!1 &1340588706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,6 +1577,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3995390080345030347, guid: f1bc670b580e6404dbd0117139c4f879, type: 3}
+      propertyPath: nefesBar
+      value: 
+      objectReference: {fileID: 1299473440}
     - target: {fileID: 3995390080345030348, guid: f1bc670b580e6404dbd0117139c4f879, type: 3}
       propertyPath: m_RootOrder
       value: 3

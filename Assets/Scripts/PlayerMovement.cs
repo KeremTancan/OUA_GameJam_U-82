@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,10 @@ public class PlayerMovement : MonoBehaviour
     public bool facingRight = true;
     public Transform firepoint;
     public GameObject bullet;
-    
+
+    public int maxBreath = 30;
+    public int currentBreath;
+    public NefesBar nefesBar;
 
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
@@ -22,8 +26,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        currentBreath = maxBreath;
+        nefesBar.SetMaxBreath(maxBreath);
         rb = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+        
     }
 
 
@@ -45,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
             float HmoveDirection = horizontalInput * moveSpeed;
             rb.velocity = new Vector2(HmoveDirection, rb.velocity.y);
 
+            
+
             if (rb.velocity.x < 0 && facingRight)//y�z� sa�a do�ru ba�lang��taki gibi ama ivme negatif ,y�z�n� �evir
             {
                 FlipFace();//Yuzunu cevir metodu
@@ -61,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 Shoot();
             }
-
+            
         }
         else
         {
@@ -94,14 +103,21 @@ public class PlayerMovement : MonoBehaviour
 
         
     }
+    void LoverBreath(int value)
+    {
+        
+        currentBreath -= value;
+        nefesBar.SetBreath(currentBreath);
+    }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Water"))
         {
-
+            
             Invoke("ChangeBool", 0.4f);
+            Debug.Log("Suda");
         }
     }
 
@@ -111,6 +127,7 @@ public class PlayerMovement : MonoBehaviour
         {
             
             isUnderwater = false;
+            Debug.Log("Suda değil");
         }
     }
 
