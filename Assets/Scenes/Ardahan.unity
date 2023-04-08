@@ -4532,10 +4532,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3995390080345030347, guid: f1bc670b580e6404dbd0117139c4f879, type: 3}
-      propertyPath: fireRate
-      value: 0.8
-      objectReference: {fileID: 0}
+    - target: {fileID: 2716135338113992772, guid: f1bc670b580e6404dbd0117139c4f879, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a3c3b594b408fc408b3e9d9da5b4200, type: 3}
     - target: {fileID: 3995390080345030347, guid: f1bc670b580e6404dbd0117139c4f879, type: 3}
       propertyPath: nefesBar
       value: 
@@ -4587,10 +4587,6 @@ PrefabInstance:
     - target: {fileID: 3995390080345030352, guid: f1bc670b580e6404dbd0117139c4f879, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3995390082178948479, guid: f1bc670b580e6404dbd0117139c4f879, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1bc670b580e6404dbd0117139c4f879, type: 3}
