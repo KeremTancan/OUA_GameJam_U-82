@@ -1,19 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 
 public class FishMovement : MonoBehaviour
 {
     public Transform[] patrolPoints;
     public float moveSpeed;
     public int patrolDestination;
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Bullet"))
         {
             Destroy(gameObject);
+            ScoreCounter.scoreValue += 10;
+            Debug.Log(ScoreCounter.scoreValue);
         }
     }
     void Update()
