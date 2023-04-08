@@ -8,11 +8,11 @@ public class ScoreCounter : MonoBehaviour
 {
     // Start is called before the first frame update
     public static int scoreValue = 0;
-    public Text score;
+    public static TextMeshPro score;
    
         void Start()
     {
-        score = GetComponent<Text>();    
+        score = GetComponent<TextMeshPro>();    
     }
 
     // Update is called once per frame
