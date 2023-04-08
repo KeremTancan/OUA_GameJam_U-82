@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
@@ -49,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
             if (timer >= interval)
             {
                 
-                LoverBreath(5); 
+                LoverBreath(15); 
                 timer = 0f;
             }
             rb.gravityScale = underwaterGravity;
@@ -109,11 +110,8 @@ public class PlayerMovement : MonoBehaviour
                 FlipFace(); //Yuzunu cevir metodu
                 
             }
-            // Make the character jump if the space bar is pressed
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            }
+            
+           
         }
 
         
@@ -123,6 +121,11 @@ public class PlayerMovement : MonoBehaviour
        
         currentBreath -= value;
         nefesBar.SetBreath(currentBreath);
+        if(currentBreath == 0)
+        {
+            ScoreCounter.scoreValue = 0;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
 

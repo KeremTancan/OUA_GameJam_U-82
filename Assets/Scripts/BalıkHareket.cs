@@ -53,6 +53,7 @@ public class BalıkHareket : MonoBehaviour
         {
             Destroy(gameObject);
             ScoreCounter.scoreValue += 10;
+            Destroy(other.gameObject);
 
         }
     }
