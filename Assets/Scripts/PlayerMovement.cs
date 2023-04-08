@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,10 +11,13 @@ public class PlayerMovement : MonoBehaviour
     public bool facingRight = true;
     public Transform firepoint;
     public GameObject bullet;
+    public Slider slider;
+    public int maxNefes;
 
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
     public float underwaterGravity = 0f;
+
 
     private void Start()
     {
