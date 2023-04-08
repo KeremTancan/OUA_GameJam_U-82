@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     Animator playerAnimator;
     private bool isUnderwater = false;
     public bool facingRight = true;
+    public Transform firepoint;
+    public GameObject bullet;
 
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
@@ -46,6 +48,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 FlipFace(); //Yuzunu cevir metodu
             }
+
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Shoot();
+            }
+
         }
         else
         {
@@ -103,7 +111,13 @@ public class PlayerMovement : MonoBehaviour
         Vector3 tempLocalScale = transform.localScale;
         tempLocalScale.x *= -1;
         transform.localScale = tempLocalScale;
+        
 
+    }
+
+    void Shoot()
+    {
+        Instantiate(bullet, firepoint.position, firepoint.rotation);
     }
 }
 
