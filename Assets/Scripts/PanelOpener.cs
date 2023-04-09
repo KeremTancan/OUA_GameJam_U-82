@@ -28,17 +28,13 @@ public class PanelOpener : MonoBehaviour
         switch(ScoreCounter.scoreValue)
         {
 
-         //hiz artirma kismi
+         
             case >= 400:
                 PlayerMovement.uwMoveSpeed += 1;
                 ScoreCounter.scoreValue -= 400;
                 button.SetActive(false);
                 break;
-            
-           
-
-
-        //nefes artirma kismi
+             
             case >= 300:
                 Debug.Log("nefes 90");
                 nefesBar.SetMaxBreath(90);
@@ -81,6 +77,8 @@ public class PanelOpener : MonoBehaviour
                 ScoreCounter.scoreValue -= 100;
                 button.SetActive(false);
                 break;
+       
+        
         }
         
         

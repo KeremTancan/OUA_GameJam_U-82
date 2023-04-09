@@ -5651,6 +5651,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 564043573, guid: f1bc670b580e6404dbd0117139c4f879, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3995390080345030347, guid: f1bc670b580e6404dbd0117139c4f879, type: 3}
       propertyPath: nefesBar
       value: 
@@ -12833,8 +12837,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -19.903566, y: -2.9675999}
-  - {x: -9.983561, y: -3.202077}
+  - {x: -19.927774, y: -3.1975727}
+  - {x: -10.076034, y: -3.1673994}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
