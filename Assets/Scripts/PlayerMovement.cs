@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public NefesBar nefesBar;
 
     public float moveSpeed = 5f;
+    public float uwMoveSpeed = 2f;
     public float jumpForce = 5f;
     public float underwaterGravity = 0f;
     private float nextFireTime = 0.0f;
@@ -67,11 +68,11 @@ public class PlayerMovement : MonoBehaviour
 
             // Move the character up or down while underwater
             float verticalInput = Input.GetAxisRaw("Vertical");
-            float VmoveDirection = verticalInput * moveSpeed;
+            float VmoveDirection = verticalInput * uwMoveSpeed;
             rb.velocity = new Vector2(rb.velocity.x, VmoveDirection);
             
             float horizontalInput = Input.GetAxisRaw("Horizontal");
-            float HmoveDirection = horizontalInput * moveSpeed;
+            float HmoveDirection = horizontalInput * uwMoveSpeed;
             rb.velocity = new Vector2(HmoveDirection, rb.velocity.y);
 
             
