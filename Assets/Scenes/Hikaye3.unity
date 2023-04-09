@@ -614,7 +614,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.4036, y: -40.1245}
+  m_AnchoredPosition: {x: 19.4036, y: -3}
   m_SizeDelta: {x: 829.2015, y: 183.9698}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1171608208
@@ -638,13 +638,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 8a2b9e2a607dd2143b58c44bc32410b4, type: 3}
+    m_FontSize: 35
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 47
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -664,11 +664,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 1303976664}
-  delay: 0.05
-  fullText: "Atlas\u0131n ya\u015F\u0131 art\u0131k gelmi\u015Fti ve dal\u0131\u015F
-    akademileri hakk\u0131nda derin ara\u015Ft\u0131rmalar i\xE7indeydi."
-  fullText2: "Tam o s\u0131rada \"Aquatic Academy\" isminde uluslararas\u0131 lisans
-    veren ve ba\u015Far\u0131l\u0131 dalg\u0131\xE7 yeti\u015Ftiren bir akademi buldu."
+  delay: 0.06
+  fullText: 'Atlas had reached the appropriate age after 3 years and was deeply researching
+    diving academies. He wanted to enroll in the best and most successful academy
+    for himself. '
+  fullText2: Just then, he found an academy called "Aquatic Academy" that provided
+    international licenses and trained successful divers.
 --- !u!222 &1171608210
 CanvasRenderer:
   m_ObjectHideFlags: 0
