@@ -225,7 +225,7 @@ RectTransform:
   m_Children:
   - {fileID: 1639420949}
   m_Father: {fileID: 2105447929}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.79200006, y: 0.1548148}
   m_AnchorMax: {x: 0.79200006, y: 0.1548148}
@@ -369,12 +369,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2105447929}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2754792, y: 0.30570373}
   m_AnchorMax: {x: 0.2754792, y: 0.30570373}
-  m_AnchoredPosition: {x: 921.07996, y: 159.67096}
-  m_SizeDelta: {x: 940, y: 474.6085}
+  m_AnchoredPosition: {x: 921.07996, y: 157}
+  m_SizeDelta: {x: 940, y: 426.9922}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &670159840
 MonoBehaviour:
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 0.35810852}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -514,7 +514,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2105447929}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3224792, y: 0.72300005}
   m_AnchorMax: {x: 0.3224792, y: 0.72300005}
@@ -788,7 +788,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2754792, y: 0.30570373}
   m_AnchorMax: {x: 0.2754792, y: 0.30570373}
-  m_AnchoredPosition: {x: -58.92, y: 66.987976}
+  m_AnchoredPosition: {x: -58.92, y: 41}
   m_SizeDelta: {x: 940, y: 659.9745}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1744668636
@@ -1158,9 +1158,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1744668635}
+  - {fileID: 670159839}
   - {fileID: 1489384477}
   - {fileID: 300751614}
-  - {fileID: 670159839}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
