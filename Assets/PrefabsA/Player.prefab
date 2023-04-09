@@ -295,7 +295,7 @@ MonoBehaviour:
   Ses: {fileID: 564043572}
   nefesBar: {fileID: 0}
   moveSpeed: 4
-  uwMoveSpeed: 5
+  uwMoveSpeed: 2
   jumpForce: 5
   underwaterGravity: 0
   fireRate: 0.8

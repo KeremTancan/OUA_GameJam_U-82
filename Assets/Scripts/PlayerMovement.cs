@@ -19,8 +19,8 @@ public class PlayerMovement : MonoBehaviour
 
     public NefesBar nefesBar;
 
-    public float moveSpeed = 5f;
-    public float uwMoveSpeed = 2f;
+    public static float moveSpeed = 5f;
+    public static float uwMoveSpeed = 2f;
     public float jumpForce = 5f;
     public float underwaterGravity = 0f;
     private float nextFireTime = 0.0f;

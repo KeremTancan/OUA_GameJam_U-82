@@ -24,35 +24,61 @@ public class PanelOpener : MonoBehaviour
 
     public void ScoreIncrease()
     {
-       
-        
+   
         switch(ScoreCounter.scoreValue)
         {
-            case >= 200:
-                Debug.Log("nefes 120");
-                nefesBar.SetMaxBreath(120);
-                nefesBar.SetBreath(120);
-                NefesBar.maxBreath = 120;
-                NefesBar.currentBreath = 120;
-                ScoreCounter.scoreValue -= 200;
-                
+
+         //hiz artirma kismi
+            case >= 400:
+                PlayerMovement.uwMoveSpeed += 1;
+                ScoreCounter.scoreValue -= 400;
+                button.SetActive(false);
+                break;
+            
+           
+
+
+        //nefes artirma kismi
+            case >= 300:
+                Debug.Log("nefes 90");
+                nefesBar.SetMaxBreath(90);
+                nefesBar.SetBreath(90);
+                NefesBar.maxBreath = 90;
+                NefesBar.currentBreath = 90;
+                ScoreCounter.scoreValue -= 300;
+                button.SetActive(false);
                 break;
 
-            case >=90:
+            case >= 250:
+                PlayerMovement.uwMoveSpeed += 1;
+                ScoreCounter.scoreValue -= 250;
+                button.SetActive(false);
+                break;
+
+            case >=200:
                 Debug.Log("nefes 60");
                 nefesBar.SetMaxBreath(60);
                 nefesBar.SetBreath(60);
                 NefesBar.maxBreath = 60;
                 NefesBar.currentBreath = 60;
-                ScoreCounter.scoreValue -= 90;
+                ScoreCounter.scoreValue -= 200;
+                button.SetActive(false);
                 break;
-            case >=45:
+
+
+            case >= 150:
+                PlayerMovement.uwMoveSpeed += 1;
+                ScoreCounter.scoreValue -= 150;
+                button.SetActive(false);
+                break;
+
+            case >=100:
                 Debug.Log("nefes 45");
                 nefesBar.SetMaxBreath(45);
                 nefesBar.SetBreath(45);
                 NefesBar.maxBreath = 45;
                 NefesBar.currentBreath = 45;
-                ScoreCounter.scoreValue -= 45;
+                ScoreCounter.scoreValue -= 100;
                 button.SetActive(false);
                 break;
         }
@@ -62,6 +88,7 @@ public class PanelOpener : MonoBehaviour
         
     }
 
+    
 
 }
 
