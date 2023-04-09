@@ -135,7 +135,7 @@ public class PlayerMovement : MonoBehaviour
         if (NefesBar.currentBreath == 0)
         {
             ScoreCounter.scoreValue = 0;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 
