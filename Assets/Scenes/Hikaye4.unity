@@ -417,7 +417,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.4036, y: -40.1245}
+  m_AnchoredPosition: {x: 19.4036, y: -6}
   m_SizeDelta: {x: 829.2015, y: 183.9698}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &340675015
@@ -441,13 +441,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 8a2b9e2a607dd2143b58c44bc32410b4, type: 3}
+    m_FontSize: 35
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 47
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -467,13 +467,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 1825463122}
-  delay: 0.05
-  fullText: "Atlas'\u0131n babas\u0131 dalg\u0131\xE7t\u0131 ve bu sebeple kendisi
-    k\xFC\xE7\xFCkl\xFC\u011F\xFCnden beri dalg\u0131\xE7 olma ve sualt\u0131 avc\u0131l\u0131\u011F\u0131
-    yapma hayalini kuruyordu."
-  fullText2: "Ama hen\xFCz ya\u015F\u0131 k\xFC\xE7\xFCk oldu\u011Fu i\xE7in hi\xE7bir
-    dal\u0131\u015F akademisine kabul edilmiyordu ve bu y\xFCzden s\xFCrekli televizyondan
-    dalg\u0131\xE7lar\u0131n \xE7ekti\u011Fi belgeselleri izliyordu."
+  delay: 0.06
+  fullText: After long efforts, Atlas enrolled in the "Aquatic Academy" diving school
+    and shared his dreams with the trainers.
+  fullText2: The first task given to him by the trainers was to improve his breath-holding
+    and swimming speed. Without wasting any time, Atlas started his training...
 --- !u!222 &340675017
 CanvasRenderer:
   m_ObjectHideFlags: 0
