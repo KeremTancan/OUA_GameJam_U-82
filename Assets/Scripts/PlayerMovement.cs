@@ -113,13 +113,15 @@ public class PlayerMovement : MonoBehaviour
             if (rb.velocity.x < 0 && facingRight)//y�z� sa�a do�ru ba�lang��taki gibi ama ivme negatif ,y�z�n� �evir
             {
                 FlipFace();//Yuzunu cevir metodu
-                
+                firepoint.transform.rotation = Quaternion.Euler(0, 0, 180);
+
 
             }
             else if (rb.velocity.x > 0 && !facingRight)
             {
                 FlipFace(); //Yuzunu cevir metodu
-                
+                firepoint.transform.rotation = Quaternion.Euler(0, 0, 0);
+
             }
             
            
