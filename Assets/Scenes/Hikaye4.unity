@@ -468,12 +468,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: {fileID: 1825463122}
   delay: 0.05
-  fullText: "Atlas'\u0131n babas\u0131 dalg\u0131\xE7t\u0131 ve bu sebeple kendisi
-    k\xFC\xE7\xFCkl\xFC\u011F\xFCnden beri dalg\u0131\xE7 olma ve sualt\u0131 avc\u0131l\u0131\u011F\u0131
-    yapma hayalini kuruyordu."
-  fullText2: "Ama hen\xFCz ya\u015F\u0131 k\xFC\xE7\xFCk oldu\u011Fu i\xE7in hi\xE7bir
-    dal\u0131\u015F akademisine kabul edilmiyordu ve bu y\xFCzden s\xFCrekli televizyondan
-    dalg\u0131\xE7lar\u0131n \xE7ekti\u011Fi belgeselleri izliyordu."
+  fullText: "Uzun u\u011Fra\u015Flar sonras\u0131 buldu\u011Fu \"Aquatic Academy\"
+    dal\u0131\u015F okuluna kay\u0131t oldu ve e\u011Fitmenlerle konu\u015Fup hayallerini
+    onlara anlatt\u0131. "
+  fullText2: "E\u011Fitmenlerin ona verdi\u011Fi g\xF6rev ise nefes tutma ve y\xFCzme
+    h\u0131z\u0131n\u0131 geli\u015Ftirecek bir i\xE7eri\u011Fe sahipti, Atlas art\u0131k
+    zaman kaybetmeden e\u011Fitimlere ba\u015Flayacakt\u0131..."
 --- !u!222 &340675017
 CanvasRenderer:
   m_ObjectHideFlags: 0
