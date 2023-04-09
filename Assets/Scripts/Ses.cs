@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Ses : MonoBehaviour
 {
-    public AudioClip waterClip;
+    private AudioClip waterClip;
     private AudioSource audioSource;
+
+   
 
     private void Start()
     {
+        waterClip = Resources.Load<AudioClip>("SuSesi");
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = waterClip;
         audioSource.Stop();
@@ -30,5 +33,5 @@ public class Ses : MonoBehaviour
         {
             audioSource.Stop();
         }
-    }
+    } 
 }

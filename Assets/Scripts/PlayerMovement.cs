@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public bool facingRight = true;
     public Transform firepoint;
     public GameObject bullet;
+    public GameObject Ses;
 
     public int maxBreath = 30;
     public int currentBreath;
@@ -28,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     private float interval = 5f;
 
     
-    
+
     private void Start()
     {
          
@@ -95,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            AudioSource.FindObjectOfType<AudioSource>().Pause();
+            
             nefesBar.SetBreath(maxBreath);
             currentBreath= maxBreath;
 
@@ -145,6 +146,7 @@ public class PlayerMovement : MonoBehaviour
             
             Invoke("ChangeBool", 0.4f);
             Debug.Log("Suda");
+            Ses.GetComponent<AudioSource>().mute = false;
         }
     }
 
@@ -155,6 +157,8 @@ public class PlayerMovement : MonoBehaviour
             
             isUnderwater = false;
             Debug.Log("Suda değil");
+            Ses.GetComponent<AudioSource>().mute = true;
+
         }
     }
 
