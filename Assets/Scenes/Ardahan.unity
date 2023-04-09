@@ -4032,11 +4032,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ccb451214d4371441aad3b455b3099d3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1a0fa83d5b6b34c3ba0aa78e8d91021c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.019
+  m_Volume: 0.2
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
