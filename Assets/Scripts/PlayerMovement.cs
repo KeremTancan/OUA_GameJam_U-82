@@ -33,11 +33,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-         
-        
-        
 
-        NefesBar.currentBreath = NefesBar.maxBreath;
+        moveSpeed = 5f;
+       uwMoveSpeed = 2f;
+
+
+    NefesBar.currentBreath = NefesBar.maxBreath;
         nefesBar.SetMaxBreath(NefesBar.maxBreath);
         rb = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
@@ -134,7 +135,7 @@ public class PlayerMovement : MonoBehaviour
 
         NefesBar.currentBreath -= value;
         nefesBar.SetBreath(NefesBar.currentBreath);
-        if (NefesBar.currentBreath == 0)
+        if (NefesBar.currentBreath <= 0)
         {
             ScoreCounter.scoreValue = 0;
             SceneManager.LoadScene("GameOverScene");

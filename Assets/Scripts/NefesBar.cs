@@ -9,6 +9,12 @@ public class NefesBar : MonoBehaviour
     public static int maxBreath = 30;
     public static int currentBreath;
 
+    private void Start()
+    {
+        maxBreath = 30;
+            SetBreath(currentBreath);
+        SetMaxBreath(maxBreath);
+    }
     public void SetMaxBreath(int Breath)
     {
         slider.maxValue= Breath;

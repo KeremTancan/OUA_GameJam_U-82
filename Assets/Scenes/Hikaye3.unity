@@ -665,12 +665,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: {fileID: 1303976664}
   delay: 0.05
-  fullText: "Atlas'\u0131n babas\u0131 dalg\u0131\xE7t\u0131 ve bu sebeple kendisi
-    k\xFC\xE7\xFCkl\xFC\u011F\xFCnden beri dalg\u0131\xE7 olma ve sualt\u0131 avc\u0131l\u0131\u011F\u0131
-    yapma hayalini kuruyordu."
-  fullText2: "Ama hen\xFCz ya\u015F\u0131 k\xFC\xE7\xFCk oldu\u011Fu i\xE7in hi\xE7bir
-    dal\u0131\u015F akademisine kabul edilmiyordu ve bu y\xFCzden s\xFCrekli televizyondan
-    dalg\u0131\xE7lar\u0131n \xE7ekti\u011Fi belgeselleri izliyordu."
+  fullText: "Atlas\u0131n ya\u015F\u0131 art\u0131k gelmi\u015Fti ve dal\u0131\u015F
+    akademileri hakk\u0131nda derin ara\u015Ft\u0131rmalar i\xE7indeydi."
+  fullText2: "Tam o s\u0131rada \"Aquatic Academy\" isminde uluslararas\u0131 lisans
+    veren ve ba\u015Far\u0131l\u0131 dalg\u0131\xE7 yeti\u015Ftiren bir akademi buldu."
 --- !u!222 &1171608210
 CanvasRenderer:
   m_ObjectHideFlags: 0
