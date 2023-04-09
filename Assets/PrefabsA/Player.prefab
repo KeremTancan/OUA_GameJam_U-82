@@ -293,10 +293,9 @@ MonoBehaviour:
   firepoint: {fileID: 3995390080386298812}
   bullet: {fileID: 3994957269174997946, guid: b368549bfc5edf04c91fdd426ee27c0b, type: 3}
   Ses: {fileID: 564043572}
-  maxBreath: 30
-  currentBreath: 0
   nefesBar: {fileID: 0}
   moveSpeed: 4
+  uwMoveSpeed: 5
   jumpForce: 5
   underwaterGravity: 0
   fireRate: 0.8
