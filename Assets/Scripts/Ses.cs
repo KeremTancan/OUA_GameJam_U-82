@@ -11,6 +11,7 @@ public class Ses : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = waterClip;
+        audioSource.Stop();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -18,6 +19,7 @@ public class Ses : MonoBehaviour
         if (other.CompareTag("Water"))
         {
             audioSource.Play();
+            Debug.Log("ses");
             
         }
     }
