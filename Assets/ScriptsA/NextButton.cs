@@ -8,19 +8,19 @@ public class NextButton : MonoBehaviour
    
     public void Next1()
     {
-        SceneManager.LoadScene("Ardahan"); // Sonraki sahnenin adýný koy
+        SceneManager.LoadScene("Hikaye2"); // Sonraki sahnenin adýný koy
 
     }
 
     public void Next2()
     {
-        SceneManager.LoadScene("Ardahan"); // Sonraki sahnenin adýný koy
+        SceneManager.LoadScene("Hikaye3"); // Sonraki sahnenin adýný koy
 
     }
 
     public void Next3()
     {
-        SceneManager.LoadScene("Ardahan"); // Sonraki sahnenin adýný koy
+        SceneManager.LoadScene("Hikaye4"); // Sonraki sahnenin adýný koy
 
     }
 
