@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PanelOpener : MonoBehaviour
 {
     public GameObject panel;
     
     public NefesBar nefesBar;
+
+    public GameObject button;
 
     public void OpenPanel()
     {
@@ -43,13 +46,14 @@ public class PanelOpener : MonoBehaviour
                 NefesBar.currentBreath = 60;
                 ScoreCounter.scoreValue -= 90;
                 break;
-            case >=30:
+            case >=45:
                 Debug.Log("nefes 45");
                 nefesBar.SetMaxBreath(45);
                 nefesBar.SetBreath(45);
                 NefesBar.maxBreath = 45;
                 NefesBar.currentBreath = 45;
-                ScoreCounter.scoreValue -= 30;
+                ScoreCounter.scoreValue -= 45;
+                button.SetActive(false);
                 break;
         }
         
