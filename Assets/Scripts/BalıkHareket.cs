@@ -11,6 +11,10 @@ public class BalıkHareket : MonoBehaviour
     private Vector2 moveDirection;
     private float timer;
 
+    
+
+    private int scoreInc = 10;
+
 
     void Start()
     {
@@ -36,7 +40,7 @@ public class BalıkHareket : MonoBehaviour
         rb.MovePosition(new Vector2(rb.position.x, newPosY) + moveDirection * speed * Time.fixedDeltaTime);
     }
 
-    
+
 
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -44,7 +48,7 @@ public class BalıkHareket : MonoBehaviour
         {
             ChangeDirection();
         }
-       
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -52,7 +56,7 @@ public class BalıkHareket : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
             Destroy(gameObject);
-            ScoreCounter.scoreValue += 10;
+            ScoreCounter.scoreValue += scoreInc;
             Destroy(other.gameObject);
 
         }
@@ -64,4 +68,5 @@ public class BalıkHareket : MonoBehaviour
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
+    
 }

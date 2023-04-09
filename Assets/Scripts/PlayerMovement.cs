@@ -15,8 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject bullet;
     public GameObject Ses;
 
-    public int maxBreath = 30;
-    public int currentBreath;
+    
+
     public NefesBar nefesBar;
 
     public float moveSpeed = 5f;
@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public float fireRate = 0.8f;  //Ateş etme zamanı
 
     private float timer = 0f;
-    private float interval = 5f;
+    private float interval = 3f;
 
     
 
@@ -36,8 +36,8 @@ public class PlayerMovement : MonoBehaviour
         
         
 
-        currentBreath = maxBreath;
-        nefesBar.SetMaxBreath(maxBreath);
+        NefesBar.currentBreath = NefesBar.maxBreath;
+        nefesBar.SetMaxBreath(NefesBar.maxBreath);
         rb = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             if (timer >= interval)
             {
                 
-                LoverBreath(15); 
+                LoverBreath(6); 
                 timer = 0f;
             }
             rb.gravityScale = underwaterGravity;
@@ -96,9 +96,9 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            
-            nefesBar.SetBreath(maxBreath);
-            currentBreath= maxBreath;
+
+            nefesBar.SetBreath(NefesBar.maxBreath);
+            NefesBar.currentBreath = NefesBar.maxBreath;
 
             playerAnimator.SetBool("isSwimming", false);
             rb.gravityScale = 1f;
@@ -128,10 +128,10 @@ public class PlayerMovement : MonoBehaviour
     }
     void LoverBreath(int value)
     {
-       
-        currentBreath -= value;
-        nefesBar.SetBreath(currentBreath);
-        if(currentBreath == 0)
+
+        NefesBar.currentBreath -= value;
+        nefesBar.SetBreath(NefesBar.currentBreath);
+        if (NefesBar.currentBreath == 0)
         {
             ScoreCounter.scoreValue = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

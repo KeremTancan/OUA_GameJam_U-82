@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class NefesBar : MonoBehaviour
 {
     public Slider slider;
+    public static int maxBreath = 30;
+    public static int currentBreath;
 
     public void SetMaxBreath(int Breath)
     {

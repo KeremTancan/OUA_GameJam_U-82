@@ -7,11 +7,14 @@ using UnityEngine.UI;
 public class ScoreCounter : MonoBehaviour
 {
     // Start is called before the first frame update
-    public static int scoreValue = 0;
+    public static int scoreValue;
     public static TextMeshProUGUI score;
-   
-        void Start()
+
+    
+
+    void Start()
     {
+        
         score = GetComponent<TextMeshProUGUI>();    
     }
 
@@ -19,5 +22,8 @@ public class ScoreCounter : MonoBehaviour
     void Update()
     {
         score.text = "Score : " + scoreValue;
-    } 
+        
+    }
+
+    
 }
