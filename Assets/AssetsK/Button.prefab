@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 3667204354374148887}
   - component: {fileID: 3667204354374149096}
   - component: {fileID: 3667204354374149097}
+  - component: {fileID: 1073322574302666712}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -172,7 +173,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -204.62769, y: 58.85901}
+  m_AnchoredPosition: {x: -204.6277, y: 58.85901}
   m_SizeDelta: {x: 269.35034, y: 46.292114}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3667204354374148887
@@ -257,15 +258,27 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: b70676673bbe0834c9b9a045871999f8, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1073322574302666712}
+        m_TargetAssemblyTypeName: NextButton, Assembly-CSharp
+        m_MethodName: Next1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1073322574302666712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3667204354374149099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70676673bbe0834c9b9a045871999f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

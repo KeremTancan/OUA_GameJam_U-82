@@ -6,6 +6,6 @@ public class StartButtonAfter : MonoBehaviour
 {
     public void LoadScene()
     {
-        SceneManager.LoadScene("Ardahan");
+        SceneManager.LoadScene("Hikaye1");
     }
 }
